@@ -1,0 +1,12 @@
+{% extends 'employee/layout.html' %}
+{% block content %}
+<h3 class="center-align red lighten-3"> {{title}}</h3>
+<dl class="collection">
+{% for emp in employee %}
+<dt class="collection-item"><a href="/admin/myapp/employee/{{emp.id}}" >{{emp.first_name}} {{emp.last_name}} </a>
+</dt>
+{% endfor %}
+</dl>
+
+
+{% endblock %}
